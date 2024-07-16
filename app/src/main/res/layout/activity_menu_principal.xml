@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_general"
+    tools:context=".MainActivity">
+
+    <!-- Título del menú principal -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menú Principal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="top|center_horizontal"
+        android:padding="16dp"/>
+
+    <!-- Contenedor principal -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <!-- Imagen y botón de Productos -->
+        <LinearLayout
+            android:id="@+id/productsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgProducts"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:src="@drawable/agua" />
+
+            <Button
+                android:id="@+id/btnProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:onClick="goToProductList"
+                android:text="Productos" />
+        </LinearLayout>
+
+        <!-- Imagen y botón de Inventario -->
+        <LinearLayout
+            android:id="@+id/inventoryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgInventory"
+                android:layout_width="125dp"
+                android:layout_height="111dp"
+                android:src="@drawable/inventario" />
+
+            <Button
+                android:id="@+id/btnInventory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goToInventoryList"
+                android:text="Inventario" />
+        </LinearLayout>
+
+        <!-- Imagen y botón de Clientes -->
+        <LinearLayout
+            android:id="@+id/clientsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="300dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgClients"
+                android:layout_width="118dp"
+                android:layout_height="103dp"
+                android:src="@drawable/cliente" />
+
+            <Button
+                android:id="@+id/btnClients"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="goToClientList"
+                android:text="Clientes" />
+        </LinearLayout>
+
+        <!-- Imagen y botón de Reportes -->
+        <LinearLayout
+            android:id="@+id/reportsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="300dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgReports"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:src="@drawable/reporte" />
+
+            <Button
+                android:id="@+id/btnReports"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:onClick="goToReports"
+                android:text="Reportes" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
